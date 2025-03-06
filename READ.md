@@ -95,6 +95,7 @@ mvn test
 ## **Stopping and Cleaning Up**
 To stop all containers and remove volumes:
 ```sh
+docker-compose -f docker-compose-app.yml up
 docker-compose -f docker-compose-app.yml down -v
 ```
 

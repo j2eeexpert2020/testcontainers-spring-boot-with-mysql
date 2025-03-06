@@ -6,7 +6,7 @@ services:
     container_name: mysql_container
     restart: always
     environment:
-      MYSQL_USER: mkyong
+      MYSQL_USER: root
       MYSQL_PASSWORD: password
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: mydb
@@ -29,7 +29,7 @@ services:
         condition: service_healthy
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/mydb
-      SPRING_DATASOURCE_USERNAME: mkyong
+      SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: password
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
       SPRING_JPA_DATABASE_PLATFORM: org.hibernate.dialect.MySQL8Dialect
